@@ -1,0 +1,88 @@
+body{
+	max-width:100%;
+}
+/* プロフィール内部 */
+
+.clear { clear: both; }
+
+
+
+/*友達一覧・トークの履歴*/
+
+#histslide,#friend{
+	width:500px;
+	height:100%;
+	max-width:100%;
+}
+
+	
+.bx-wrapper{
+	zoom:70%;
+}
+
+.bx-viewport{
+	height:300px !important;
+}
+
+#histslide ul,#friend ul{
+	height:250px;
+}
+
+#histslide li,#friend li{
+	width:200px;
+	float:left;
+}
+
+#histslide img,#friend img{
+	width:200px;
+	height:200px;
+}
+
+#histSlider img,#friendSlider img{
+	width:150px;
+	height:auto;
+}
+
+.日本語トーク,.英語トーク{
+	height:300px;
+}
+
+.triming{
+	 border: 1px solid #aaa;
+    display:block;
+    width:150px; /*トリミング後の横幅*/
+    height:150px; /*トリミング後の縦幅*/
+    overflow:hidden;
+    position:relative;
+    z-index:1;
+}
+
+.triming img{
+    width:170px !important;
+    height:auto;
+   }
+
+.triming-prof{
+    border: 1px solid #aaa;
+    display:block;
+    width:80px; /*トリミング後の横幅*/
+    height:80px; /*トリミング後の縦幅*/
+    overflow:hidden;
+    position:relative;
+    z-index:1;
+}
+
+.triming-prof img{
+    width:100px !important;
+    height:auto;
+   }
+
+.日本語トーク .英語トーク{
+	cursor:pointer;
+}
+
+.日本語トーク:hover .英語トーク:hover{
+	opacity:0.5;
+}
+
+

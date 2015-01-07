@@ -1,0 +1,15 @@
+<?php
+header("Content-type:text/plain;charset=UTF-8");
+
+//セッションを始める
+session_start();
+	
+//ユーザー名を取得
+$tmp = "<img class='img-responsive' style='float:right;' src='prof/".$_SESSION["image"]."' width='80px' height='80px'/><br/>".$_SESSION["name"]." さん,";
+	
+//チケット取得
+$tmp = $tmp."LCコイン： ".$_SESSION["ticket"]." 枚<br/>友達： ".$_SESSION["friends"]."人";
+
+echo $tmp;
+
+?>

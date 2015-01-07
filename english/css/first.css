@@ -1,0 +1,52 @@
+/* 初めてのかたへ */
+#main-title{
+	text-align:center;
+	font-size:24pt;
+	line-height:2.0em;
+	font-weight:bold;
+}
+
+.articles h1{
+	font-size:20pt;
+	line-height:2.0em;
+	font-weight:bold;
+}
+
+.articles p{
+	font-size:12pt;
+}
+
+
+
+.first-wrap{
+	height:400px;
+	}
+.image-side{
+	padding-top:30px;
+	width:300px;
+}
+
+.caracter-side{
+	width:600px;
+	font-size:12pt;
+	text-align:left;
+	display:table-cell;
+}
+
+.caracter-side h1{
+	font-size:20pt;
+	font-weight:bold;
+	line-height:2.0em;
+}
+
+.caracter-side p{
+	padding:0 20px;
+}
+
+.first-article-4{
+	float:right;
+	margin-top:20px;
+	margin-left:20px;
+	font-size:12pt;
+	width:700px;
+}

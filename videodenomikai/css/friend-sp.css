@@ -1,0 +1,49 @@
+body{
+	max-width:100%;
+}
+/* プロフィール内部 */
+
+.clear { clear: both; }
+
+
+
+/*友達一覧・トークの履歴*/
+
+#histslide,#friend{
+	width:740px;
+	height:400px;
+	max-width:100%;
+}
+
+.content{
+	height:400px !important;
+}	
+.bx-wrapper{
+	zoom:30%;
+}
+
+.bx-viewport{
+	height:700px !important;
+}
+
+#histslide ul,#friend ul{
+	height:250px;
+}
+
+#histslide li,#friend li{
+	width:200px;
+	float:left;
+}
+
+#histslide img,#friend img{
+	width:200px;
+	height:200px;
+}
+
+#histSlider img,#friendSlider img{
+	width:150px;
+	height:auto;
+}
+
+
+

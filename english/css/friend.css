@@ -1,0 +1,131 @@
+/* プロフィール内部 */
+#image{
+	padding:20px;
+	width:200px;	
+}
+
+#fwrap{
+	float:left;
+}
+
+#privacy{
+	padding:20px;
+	line-height:1.5em;
+	font-size:12pt;
+	float:left;
+}
+
+
+#profile table{
+	width:500px;
+	padding:20px;
+	font-weight:nomal;
+	font-size:9pt;
+}
+
+#profile th{
+	width:60px;
+	line-height:1.0em;
+	text-align:center;
+	padding:4px;
+	background:#ddd;
+	border:solid 0.5pt #fff;
+}
+
+
+#profile td {
+	width:60px;
+	height:20px;
+	text-align:center;
+	vertical-align:middle;
+	padding:4px;
+	background:#eee;
+	border:solid 0.5pt #fff;
+}
+
+#profbutton{
+	text-align:center;
+	vertical-align:middle;
+	padding:0;
+	margin:0;
+	width:50px;
+}
+
+#profimage{
+	padding:0;
+	margin:0;
+	width:50px;
+	height:20px;
+}
+
+.clear { clear: both; }
+
+
+
+/*友達一覧・トークの履歴*/
+#histslide{
+	width:750px;
+	height:100%;
+}
+
+#friend{
+	width:750px;
+	height:100%;
+}
+
+.bx-viewport{
+	height:270px !important;	
+}
+
+#histslide ul,#friend ul{
+	height:250px;
+}
+
+#histslide li,#friend li{
+	width:200px;
+	float:left;
+}
+
+
+
+#schejule img{
+	width:100%;
+	height:auto;
+}
+
+.triming{
+    display:block;
+    width:150px; /*トリミング後の横幅*/
+    height:150px; /*トリミング後の縦幅*/
+    overflow:hidden;
+    position:relative;
+    z-index:1;
+}
+
+.triming img{
+    width:170px !important;
+    height:auto;
+   }
+
+.triming-prof{
+    
+    display:block;
+    width:80px; /*トリミング後の横幅*/
+    height:80px; /*トリミング後の縦幅*/
+    overflow:hidden;
+    position:relative;
+    z-index:1;
+}
+
+.triming-prof img{
+    width:100px !important;
+    height:auto;
+   }
+
+.日本語トーク .英語トーク{
+	cursor:pointer;
+}
+
+.日本語トーク:hover .英語トーク:hover{
+	opacity:0.5;
+}

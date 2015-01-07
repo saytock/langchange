@@ -1,0 +1,181 @@
+/*全体*/
+#logo img{
+        width:100% !important;
+	zoom:50%;
+}
+
+.tab-content{
+	padding:5px !important;
+}
+
+section.content{
+	padding:5px !important;
+}
+
+h1{
+  font-size: 20px;
+  color:#fff;
+}
+
+h2{
+  font-size: 16px;
+}
+
+h3{
+  font-size: 16px;
+  color: #787878;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+h4{
+  font-size: 16px;
+}
+/* ロゴ */
+a#logo{
+	
+}
+
+/* フッター */
+.footerGrid-left ul{
+	list-style:none;
+}
+
+.fb-comments iframe{
+	width:20px;
+}
+
+.footerGrid-left{
+	text-align:center;
+}
+
+.footerGrid-wrapper{
+	
+}
+
+.footerGrid-center{
+	
+}
+
+.footerGrid-right{
+	margin-top:40px;
+}
+/*トップページ*/
+.center h2{
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+/* トップページカバー */
+#top-cover{
+	zoom:40%;
+	position:relative
+}
+
+.carousel-indicators{
+	position:absolute;
+	bottom:-60px !important;
+}
+
+
+/* スライドサイズ調整 */
+#for-mobile{
+	zoom:40%;
+}
+
+/* 4つの理由 */
+#services {
+	display:none;
+}
+
+#services p{
+	display:none;
+}
+
+#services img{
+	zoom:85%;
+}
+
+/* langcnangeの思い */
+#partner{
+	display:none;
+}
+
+/* langcnange活用例 */
+#middle{
+	display:none;
+}
+
+/*langchangeって ここどうしよう*/
+.sp-whatslangchange h2{
+	font-size: 12px;
+}
+
+#feature h4{
+	margin: 0 20px;
+}
+
+/* つかいかた */
+.feature-sp{
+	height:300px !important;
+}
+
+/* トークのガイドライン 表の位置調整 */
+
+.talkguid-content{
+	margin:0 auto;
+	width:90% !important;
+}
+
+/* 新規登録セクション*/
+#resistArea{
+	zoom:60%;
+}
+
+input[type="text"],input[type="password"],select{
+	width:70%;
+	height:auto;
+}
+
+/* メインページのプロフィール */
+#profile-pc{
+	display:none;
+}
+
+
+/* ログのサイズ */
+#log{
+	height: 250px;
+	width: 330px;
+}
+
+.jqplot-title{
+	font-size:15pt !important;
+}
+
+/* 設定のサイズ */
+#settingform section{
+	zoom:40%;
+}
+
+/* PC版メニューの非表示 */
+.menu-pc{
+	display:none;
+}
+
+.footerGrid-left{
+	display:none;
+}
+
+
+/* 背景の削除 */
+.no-background{
+	padding:0px !important;
+	margin:0px !important;
+	width:100% !important;	
+}
+
+#ui-dialog{
+	max-width:100%;
+}

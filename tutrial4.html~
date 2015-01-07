@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>マイページ | Langchange~学生のための英会話~</title>
+    <!-- core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link href="css/system.css" rel="stylesheet">
+    <link href="css/jquery.mmenu.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/introjs.css" type="text/css">
+    <link rel="stylesheet" href="css/friend.css" type="text/css" media="screen">
+    <link type="text/css" rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/cupertino/jquery-ui.min.css">
+   <link rel="stylesheet" href="css/sp.css" type="text/css" media="only screen and (min-width: 0px) and (max-width: 1279px)">
+         <link rel="stylesheet" href="css/pc.css" type="text/css" media="only screen and (min-width: 1280px)">
+         <!--
+         <link rel="stylesheet" href="css/sp.css" type="text/css" media="only screen and (min-width: 0px) and (max-width: 480px)">
+     	 <link rel="stylesheet" href="css/tab.css" type="text/css" media="only screen and (min-width: 481px) and (max-width: 768px)">
+         <link rel="stylesheet" href="css/pc.css" type="text/css" media="only screen and (min-width: 481px)">
+      -->
+    <link rel="stylesheet" href="css/resist-sp.css" type="text/css" media="only screen and (min-width: 0px) and (max-width: 480px)">
+    <link rel="stylesheet" href="css/resist.css" type="text/css" media="only screen and (min-width: 481px)">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>    <script src="js/respond.min.js"></script>    <![endif]-->
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+  </head>
+  <!--/head--> <body>
+    <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=1513109692251737&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+    <div id="header">
+  <header>
+    <nav class="navbar navbar-inverse" role="banner">
+      <div class="container" style="width:90%">
+	    <div class="navbar-header" style="max-width:100%">
+	      <a href="#langmenu"><button type="button" class="navbar-toggle" >
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span></button>
+	      </a>
+	      <a style="width:60%;" class="navbar-brand" id="logo" href="index.html">
+	      <img style="width:100%; margin-top:-10px" src="images/langchange-logo.png" alt="logo">
+	      </a>
+	    </div>
+	    <ul class="menu-pc nav navbar-nav" style="float:right;text-align:center">
+          <li><a href="whats-langchange.html">Langchangeって？</a></li>
+          <li><a href="howtouse.html">つかいかた</a></li>
+          <li><a href="talk-guidelines.html">トークのガイド</a></li>
+          <li><a href="faq.html">よくある質問</a></li>
+        </ul>
+	<!--スマートフォン用-->
+        <div  id="langmenu" class="collapse  navbar-right">
+          <ul class="nav nav-tabs nav-stacked" style="color:#333;margin-right:-40px;text-align:center">
+		    <li style="background:#888;color:#fff">システムメニュー</li>
+		    <li class=""><a href="mainpage.html" class="analistic-01">メインページ</a></li>
+            <li class=""><a href="schedule.html" class="analistic-02">スケジュール</a></li>
+            <li class="active"><a href="eng-talk.html" class="tehnical">英語を学ぶ</a></li>
+            <li class=""><a href="jap-talk.html" class="tehnical">日本語を教える</a></li>
+            <li class=""><a href="friends.html" class="tehnical">友達</a></li>
+   <!--         <li class=""><a href="talklog.html" class="tehnical">ログ</a></li>   -->
+            <li class=""><a href="settings.html" class="tehnical">設定</a></li>
+            <li class=""><a id="end"> <button class="buttons" id="logout-sp"><img style="width: 110px" src="./images/logout.png"></button></a></li>
+      <!--  <li class=""><a href="premium.html" class="tehnical">プレミアム</a></li>  -->
+	  	    <li style="background:#888;color:#fff">グローバルメニュー</li>
+            <li><a href="whats-langchange.html">Langchangeって？</a></li>
+            <li><a href="howtouse.html">つかいかた</a></li>
+            <li><a href="talk-guidelines.html">トークのガイド</a></li>
+            <li><a href="faq.html">よくある質問 </a></li>
+		    <li  style="background:#888;color:#fff">サポート</li>
+	    <!--	<li><a onclick="showTutorial()">チュートリアル</a></li>  -->
+            <li><a href="termofuse.html">ご利用規約</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
+            <li><a href="aboutus.html">運営者情報</a></li>
+            <li><a href="link.html">リンク</a></li>
+          </ul>
+        </div>
+	<!-- /スマートフォン用 -->
+      </div>
+    </nav>
+  </header>
+</div>
+  <!--/header-->
+    <div class="container no-background" style="text-align:center; width:90%;">
+      <section id="content" class="shortcode-item">
+        <div class="container no-background" style="width:100%"> <br><br>
+          <div class="tab-wrap">
+            <div class="media">
+              <div class="menu-pc parrent pull-left">
+                <ul class="nav nav-tabs nav-stacked">
+                  <li class=""><a href="mainpage.html" class="analistic-01">メインページ</a></li>
+                  <li class=""><a href="schedule.html" class="analistic-02">スケジュール</a></li>
+                  <li class="active"><a href="eng-talk.html" class="tehnical">英語を学ぶ</a></li>
+                  <li class=""><a href="jap-talk.html" class="tehnical">日本語を教える</a></li>
+                  <li class=""><a href="friends.html" class="tehnical">友達</a></li>
+         <!--         <li class=""><a href="talklog.html" class="tehnical">ログ</a></li>   -->
+                  <li class=""><a href="settings.html" class="tehnical">設定</a></li>
+				  <li class=""><a id="end"> <button class="buttons" id="logout"><img style="width: 110px" src="./images/logout.png"></button> </a></li>
+                <!--  <li class=""><a href="premium.html" class="tehnical">プレミアム</a></li> -->
+                </ul>
+              </div>
+              <div class="parrent media-body">
+                <div class="tab-content">
+                  <div class="tab-pane active in" id="tab3">
+                    <div class="media">
+                      <div class="media-body">
+                        <div id="maincontent">
+                          <section class="content">
+                            <h3 class="heading">英語トークを予約する</h3>
+                            <article>
+                              <div style="text-align: left;">
+                              <p>登録されているトークが表示されます。都合のあう日時のトークをクリックして予約しましょう。<br>※予約にはLCコインが必要です。ない場合は日本語を教えてゲットしましょう。</p>
+                                <center id="serching">
+					<!-- スマートフォン用 -->
+					<div id="for_sp">
+                                  <table>
+                                    <tbody data-intro="英語トークを予約する時は、自分の好みによってパートナーを絞り込むことができます" data-step="1" data-position="left">
+
+                                      <tr style="background:#f0ffff">
+                                        <th>相手の日本語レベル：</th>
+                                        <td style="color:#00f">
+                                          <select id="support" onchange="changeLevel(this)">
+                                            <option value="all">選択しない</option>
+                                            <option value="上級">上級</option>
+                                            <option value="中級">中級</option>
+                                            <option value="初級">初級</option>
+                                          </select>
+                                          ※使い放題</td>
+                                      </tr>
+                                      <tr>
+                                        <th style="text-align:center" colspan="2">↓
+                                          さらに絞り込む↓</th>
+                                      </tr>
+                                      <tr data-intro="「検索可能回数」をチェックしましょう。0回の場合は、コインを使って増やすことができます。1枚で2回分増やせます" data-step="2" data-position="left">
+                                        <th id="serching-count-sp" style="text-align:center"
+
+                                          colspan="2">検索可能回数： 3回 <button class='addsearch' onClick="nextStep4_2()">増やす</button>
+                                        </th>
+                                      </tr>
+                                      <tr>
+                                        <th>性別：</th>
+                                        <td>
+                                          <select id="sex" onchange="changeSex(this)">
+                                            <option value="all">選択しない</option>
+                                            <option value="Male">男性</option>
+                                            <option value="Female">女性</option>
+                                          </select>
+                                        </td>
+					  </tr>
+					  <tr>
+                                        <th>年齢：</th>
+                                        <td>
+                                          <select id="birthday" onchange="changeBirthday(this)">
+                                            <option value="all">選択しない</option>
+                                            <option value="10">10代</option>
+                                            <option value="20">20代</option>
+                                            <option value="30">30代</option>
+                                            <option value="40">40代</option>
+                                            <option value="50">50代</option>
+                                            <option value="60">60代</option>
+                                            <option value="70">70代</option>
+                                          </select>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <th>出身国：</th>
+                                        <td>
+                                          <select id="nation" onchange="changeNation(this)">
+                                            <option value="all">選択しない</option>
+                                            <option value="日本">日本</option>
+                                            <option value="アメリカ">アメリカ</option>
+                                            <option value="フィリピン">フィリピン</option>
+                                            <option value="other">それ以外</option>
+                                          </select>
+                                        </td>
+					  </tr>
+					  <tr>
+                                        <th>趣味：</th>
+                                        <td>
+                                          <select id="hobby" onchange="changeHobby(this)">
+                                            <option value="all">選択しない</option>
+                                            <option value="Manga">Manga</option>
+                                            <option value="Anime">Anime</option>
+                                            <option value="Sports">Sports</option>
+                                            <option value="Games">Games</option>
+                                            <option value="Eating">Eating</option>
+                                            <option value="Cooking">Cooking</option>
+                                            <option value="Films">Films</option>
+                                            <option value="ReadingBook">Reading Books</option>
+                                            <option value="Music">Music</option>
+                                            <option value="Traveling">Traveling</option>
+                                            <option value="Art">Art</option>
+                                          </select>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <th >名前 ※キーワード検索</th>
+                                        <td ><input size="20" id="username"
+
+                                            type="text"><button onclick="changeName()">検
+                                            索</button></td>
+                                      </tr>
+                                      <tr>
+                                        <th colspan="2" id="hobbys" style="list-style:none;"><br>
+                                        </th>
+                                      </tr>
+                                      <tr>
+                                        <th colspan="2">
+                                          <center><button data-intro="まずは「検索を開始する」ボタンをクリック" data-step="3" data-position="left" id="start" onclick="window.alert('このボタンを押すことで検索ができるようになります')">検
+                                              索を開始</button></center>
+
+                                        </th>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+					</div>
+				    <!-- /スマートフォン -->
+
+
+
+
+
+
+					<div id="for_pc">
+					<table data-intro="指定できる項目は「性別」「年齢」「出身国」「趣味」「名前」です。<br/>複数選択した場合は、全部の条件にマッチした相手のみが表示されます<br/><br/>＜例＞性別「Male」、年代「20代」⇒「20代の男性」のみ表示" data-step="4" data-position="left">
+
+                                    <tbody data-intro="英語トークを予約する時は、自分の好みによってパートナーを絞り込むことができます" data-step="1" data-position="left">
+                                      <tr style="background:#f0ffff">
+                                        <th colspan="2">相手の日本語レベル：</th>
+                                        <td colspan="2" style="color:#00f">
+                                          <select id="support" onchange="changeLevel(this)">
+                                            <option value="all">選択しない</option>
+                                            <option value="上級">上級</option>
+                                            <option value="中級">中級</option>
+                                            <option value="初級">初級</option>
+                                          </select>
+                                          ※使い放題</td>
+                                      </tr>
+                                      <tr>
+                                        <th style="text-align:center" colspan="4">↓
+                                          さらに絞り込む↓</th>
+                                      </tr>
+                                     <tr data-intro="「検索可能回数」をチェックしましょう。0回の場合は、コインを使って増やすことができます。1枚で2回分増やせます" data-step="2" data-position="left">
+                                        <th id="serching-count" style="text-align:center;"
+
+                                          colspan="4">検索可能回数： 3回 <button class='addsearch' onClick="window.alert('LCコインを1枚消費することで検索可能回数を2つ増やせます')">増やす</button>
+                                        </th>
+                                      </tr>
+                                      <tr>
+                                        <th data-intro="「性別」では、トーク相手が男性か女性かを選択することができます" data-step="5" data-position="left">性別：</th>
+                                        <td data-intro="トーク相手の「性別」を選んでみましょう" data-step="6" data-position="left">
+                                          <select id="sex" onchange="changeSex(this)">
+                                            <option value="all">選択しない</option>
+                                            <option value="Male">男性</option>
+                                            <option value="Female">女性</option>
+                                          </select>
+						
+                                        </td>
+                                        <th data-intro="「年齢」では、トーク相手の年代を選択することができます" data-step="7" data-position="left">年齢：</th>
+                                        <td data-intro="トーク相手の「年代」を選んでみましょう" data-step="8" data-position="left">
+                                          <select id="birthday" onchange="changeBirthday(this)">
+                                            <option value="all">選択しない</option>
+                                            <option value="10">10代</option>
+                                            <option value="20">20代</option>
+                                            <option value="30">30代</option>
+                                            <option value="40">40代</option>
+                                            <option value="50">50代</option>
+                                            <option value="60">60代</option>
+                                            <option value="70">70代</option>
+                                          </select>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <th data-intro="「出身国」では、トーク相手の出身国を選択することができます" data-step="9" data-position="left">出身国：</th>
+                                        <td data-intro="出身国は、現在トークを登録しているユーザーの出身国のみが表示されます" data-step="10" data-position="left">
+                                          <select id="nation" onchange="changeNation(this)">
+                                            <option value="all">選択しない</option>
+                                            <option value="America">America</option>
+                                            <option value="Australia">Australia</option>
+                                            <option value="Philippine">Philippine</option>
+                                            <option value="China">China</option>
+                                          </select>
+                                        </td>
+                                        <th data-intro="「趣味」では、トーク相手の趣味を選択することができます。" data-step="11" data-position="left">趣味：</div></th>
+                                        <td data-intro="趣味は複数選択することができます。複数選択した場合は、どれかにマッチしている相手が表示されます<br/><br/><例>「Music」「Sports」を選択⇒趣味に「音楽」もしくは「スポーツ」が含まれる相手が表示されます" data-step="12" data-position="left">
+                                          <select id="hobby" onchange="changeHobby(this)">
+                                            <option value="all">選択しない</option>
+											                                            <option value="Manga">Manga</option>
+											                                            <option value="Anime">Anime</option>
+											                                            <option value="Sports">Sports</option>
+											                                            <option value="Games">Games</option>
+											                                            <option value="Eating">Eating</option>
+											                                            <option value="Cooking">Cooking</option>
+											                                            <option value="Films">Films</option>
+											                                            <option value="ReadingBook">Reading Books</option>
+											                                            <option value="Music">Music</option>
+											                                            <option value="Traveling">Traveling</option>
+                                            <option value="Art">Art</option>
+                                          </select>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <th data-intro="「名前」では、入力した文字が名前に含まれる相手のみを表示します<br/><br/><例>「ma」⇒名前「Maria」「Mary」「Martin」「Tomas」などのユーザーが表示" data-step="13" data-position="left" colspan="2">名前 ※キーワード検索</th>
+                                        <td colspan="2"><input size="20" id="username"
+
+                                            type="text"><button onclick="changeName()">検
+                                            索</button></td>
+                                      </tr>
+                                      <tr>
+                                        <th colspan="4" id="hobbys" style="list-style:none;"><br>
+                                        </th>
+                                      </tr>
+                                      <tr>
+                                        <th colspan="4">
+                                          <center><button data-intro="まずは「検索を開始する」ボタンをクリック" data-step="3" data-position="left" id="start" onclick="nextStep4_2()">検
+                                              索を開始</button></center>
+                                        </th>
+                                      </tr>
+
+
+                                    </tbody>
+                                  </table>
+					</div>
+
+                                </center>
+                                <br>
+
+
+
+
+                                <center>
+<div id="step4_14" data-intro="条件を指定すると、指定するごとにカレンダーが更新されます。その条件にあったパートナーのトークだけ表示されます。" data-step="14" data-position="left">
+                                  <div id="resist"></div>
+</div>
+                                </center>
+                                <div id="tmp"> </div>
+                              </div>
+                            </article>
+                          </section>
+                        </div>
+                        <div id="profile">
+                          <div id="fwrap">
+                            <div id="image"> </div>
+                            <div id="privacy"> </div>
+                          </div>
+                          <div id="schejule"> </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- footer -->
+        <center>
+      <div id="footer">
+        <div id="footer-content">
+          <div class="footerGrid-left">
+            <ul style="text-align:left; font-size:12pt;">
+              <li style="font-weight:bold;font-size:14pt; text-align:left; color:#fff">-サポート-</font></li>
+              <br>
+              <li><a href="termofuse.html"><font color="#fff">ご利用規約</font></a></li>
+              <br>
+              <li><a href="contact.html"><font color="#fff">お問い合わせ</font></a></li>
+              <br>
+              <li><a href="aboutus.html"><font color="#fff">運営者情報</font></a></li>
+              <br>
+              <li><a href="link.html"><font color="#fff">リンク</font></a></li>
+              <br>
+            </ul>
+          </div>
+          <div class="footerGrid-wrapper">
+            <div style="background:#eee" class="footerGrid-center"> <iframe style="border: medium none; overflow: hidden; width: 600px; height: 400px; max-width: 100%;" src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2FLangchange2014&amp;width=400&amp;height=400&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=true&amp;show_border=true&amp;appId=1513109692251737" allowtransparency="true" scrolling="no" frameborder="0"></iframe>
+            </div>
+
+
+<div class="footerGrid-right"> <textarea cols="15" rows="10" id="contact" name="contact" placeholder="サービス、このページに関するご意見・ご要望をお待ちしております。"></textarea><br>
+              <input name="send" onclick="sendMail()" value="送信する" type="button">
+              <p style="font-size: 9pt; text-align:left"><font color="#fff">※ご意見に返信はできませんのでご了承ください</font></p>
+              <br>
+              <br>
+              <div style="font-size:9pt; text-align:left"><font color="#fff">Copyright(c) 2014
+                  Langchange All Rights Reserved.</font></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </center><!--/#footer-->
+<script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery1.7.2.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/jquery.balloon.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/checkSession.js"></script>
+    <script src="js/schejule.js"></script>
+    <script src="js/profile.js"></script>
+    <script src="js/addSerching.js"></script>
+    <script src="js/checkPop.js" ></script>
+    <script src="js/checkattendance.js"></script>
+
+    <script src="js/intro.js"></script>
+<script src="js/tutrial.js"></script>
+
+<script src="js/jquery.mmenu.min.js" type="text/javascript"></script>
+<script>$("#langmenu").mmenu();</script>
+<div id="dialog1"></div>
+    <div id="dialog2"></div>
+    <div id="dialog3"></div>
+    <div id="dialog4"></div>
+    <div id="dialog5"></div>
+    <div id="dialog6"></div>
+    <div id="dialog7"></div>
+    <div id="dialog8"></div>
+    <div id="dialog9"></div>
+    <div id="dialog10"></div>
+
+  </body>
+</html>

@@ -1,0 +1,43 @@
+body{
+	max-width:100%;
+}
+/* プロフィール内部 */
+
+.clear { clear: both; }
+
+
+
+/*友達一覧・トークの履歴*/
+
+#histslide,#friend{
+	width:740px;
+	height:400px;
+	max-width:100%;
+}
+
+/* スライダーの高さ*/
+.content{
+	height:500px !important;
+}	
+
+/* スライダーの幅 */
+.bx-viewport{
+	width:600px !important;
+	
+}
+
+
+
+#histslide li,#friend li{
+	width:200px !important;
+	float:left;
+	margin:0;
+}
+
+#histSlide img,#friend img{
+	width:150px !important;
+	height:auto;
+}
+
+
+

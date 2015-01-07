@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>無料会員登録 | Langchange~学生のための英会話~</title>
+    <!-- core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link href="css/system.css" rel="stylesheet">
+    <link href="css/initresist.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/sp.css" type="text/css" media="only screen and (min-width: 0px) and (max-width: 480px)">
+    <link rel="stylesheet" href="css/tab.css" type="text/css" media="only screen and (min-width: 481px) and (max-width: 768px)">
+    <link rel="stylesheet" href="css/pc.css" type="text/css" media="only screen and (min-width: 769px)">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>    <script src="js/respond.min.js"></script>    <![endif]-->
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+  </head>
+  <!--/head--> <body>
+    <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=1513109692251737&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+    <header id="header">
+      <div class="logo"> <a href="index.html"><img style="width:20%;"
+
+            src="images/langchange-logo.png"></a> </div>
+    </header>
+    <!--/header-->
+    <div class="container">
+      <div id="wrapper"> <br>
+        <br>
+        <br>
+        <center>
+          <div id="resistArea">
+            <section class="content" style="height:800px;max-width:100%"> <img src="images/register-2.png"
+
+                height="100px" width="400px">
+              <h3 class="heading">プロフィールを登録しよう</h3>
+              <article>
+                <div id="setting">
+                  <div style="text-align: left;" id="left">
+                    <center>
+                      <table style="width: 100%;" border="0">
+                        <tbody>
+                          <tr>
+                            <th>ユーザー名<br><br></th>
+                            <td>：<input id="name" name="name" size="20" type="text"><p>※誰でも読めるように、ローマ字表記をお願いします。</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>学びたい言語</th>
+                            <td>：
+                              <select onChange="changeLang(this)" id="country" name="country">
+                                <option value="外国人">日本語</option>
+                                <option value="日本人">English</option>
+                              </select>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>教える言語</th>
+                            <td>：
+                              <select disabled="disabled" id="mlanguage" name="mlanguage">
+                                <option value="English">English</option>
+				   <option value="日本語">日本語</option>
+
+				 </select>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>性別</th>
+                            <td>：
+                              <select id="sex" name="sex">
+                                <option value="男">男</option>
+                                <option value="女">女</option>
+                              </select>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>誕生日</th>
+                            <td>
+                              ：<div id="birthday" style="display: inline-block;">
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>大学名<div style="color:#f00;display:inline-block">※任意</div></th>
+                            <td>：<input id="college" name="college" size="20" type="text"></td>
+                          </tr>
+                          <tr>
+                            <th>出身地</th>
+                            <td>：<select id="nation" name="nation">
+					<option value="">選択してください</option>
+					<option value="Afghanistan">Afghanistan</option>
+					<option value="Albania">Albania</option>
+					<option value="Argentina">Argentina</option>
+					<option value="Armenia">Armenia</option>
+					<option value="Australia">Australia</option>
+					<option value="Austria">Austria</option>
+					<option value="Bahrain">Bahrain</option>
+					<option value="Belgium">Belgium</option>
+					<option value="Bolivia">Bolivia</option>
+					<option value="Brazil">Brazil</option>
+					<option value="Brunei">Brunei</option>
+					<option value="Bulgaria">Bulgaria</option>
+					<option value="Cameroon">Cameroon</option>
+					<option value="Canada">Canada</option>
+					<option value="Chile">Chile</option>
+					<option value="China">China</option>
+					<option value="Colombia">Colombia</option>
+					<option value="Costa Rica">Costa Rica</option>
+					<option value="Croatia">Croatia</option>
+					<option value="Cuba">Cuba</option>
+					<option value="Cyprus">Cyprus</option>
+					<option value="Denmark">Denmark</option>
+					<option value="Dominica">Dominica</option>
+					<option value="Dominican Republic">Dominican Republic</option>
+					<option value="Ecuador">Ecuador</option>
+					<option value="Egypt">Egypt</option>
+					<option value="England">England</option>
+					<option value="Estonia">Estonia</option>
+					<option value="Ethiopia">Ethiopia</option>
+					<option value="Finland">Finland</option>
+					<option value="France">France</option>
+					<option value="Georgia">Georgia</option>
+					<option value="Ghana">Ghana</option>
+					<option value="Greece">Greece</option>
+					<option value="Greenland">Greenland</option>
+					<option value="Guam">Guam</option>
+					<option value="Guatemala">Guatemala</option>
+					<option value="Guinea">Guinea</option>
+					<option value="Haiti">Haiti</option>
+					<option value="Honduras">Honduras</option>
+					<option value="Hong Kong">Hong Kong</option>
+					<option value="Hungary">Hungary</option>
+					<option value="Iceland">Iceland</option>
+					<option value="India">India</option>
+					<option value="Indonesia">Indonesia</option>
+					<option value="Iran">Iran</option>
+					<option value="Iraq">Iraq</option>
+					<option value="Ireland">Ireland</option>
+					<option value="Israel">Israel</option>
+					<option value="Italy">Italy</option>
+					<option value="Jamaica">Jamaica</option>
+					<option value="日本">Japan</option>
+					<option value="Jordan">Jordan</option>
+					<option value="Kenya">Kenya</option>
+					<option value="Korea">Korea</option>
+					<option value="Kuwait">Kuwait</option>
+					<option value="Kyrgyz Republic">Kyrgyz Republic</option>
+					<option value="Laos">Laos</option>
+					<option value="Lebanon">Lebanon</option>
+					<option value="Macao">Macao</option>
+					<option value="Macedonia">Macedonia</option>
+					<option value="Malaysia">Malaysia</option>
+					<option value="Malta">Malta</option>
+					<option value="Mexico">Mexico</option>
+					<option value="Monaco">Monaco</option>
+					<option value="Mongolia">Mongolia</option>
+					<option value="Montenegro">Montenegro</option>
+					<option value="Morocco">Morocco</option>
+					<option value="Nepal">Nepal</option>
+					<option value="Netherlands">Netherlands</option>
+					<option value="New Zealand">New Zealand</option>
+					<option value="Nicaragua">Nicaragua</option>
+					<option value="Nigeria">Nigeria</option>
+					<option value="North Korea">North Korea</option>
+					<option value="Norway">Norway</option>
+					<option value="Oman">Oman</option>
+					<option value="Pakistan">Pakistan</option>
+					<option value="Palestine">Palestine</option>
+					<option value="Papua New Guinea">Papua New Guinea</option>
+					<option value="Paraguay">Paraguay</option>
+					<option value="Peru">Peru</option>
+					<option value="Philippines">Philippines</option>
+					<option value="Poland">Poland</option>
+					<option value="Portugal">Portugal</option>
+					<option value="Puerto Rico">Puerto Rico</option>
+					<option value="Republic of Azerbaijan">Republic of Azerbaijan</option>
+					<option value="Republic of Kazakhstan">Republic of Kazakhstan</option>
+					<option value="Republic of Tajikistan">Republic of Tajikistan</option>
+					<option value="Romania">Romania</option>
+					<option value="Russia">Russia</option>
+					<option value="Saudi Arabia">Saudi Arabia</option>
+					<option value="Serbia">Serbia</option>
+					<option value="Singapore">Singapore</option>
+					<option value="Somalia">Somalia</option>
+					<option value="South Africa">South Africa</option>
+					<option value="Spain">Spain</option>
+					<option value="Sri Lanka">Sri Lanka</option>
+					<option value="Sweden">Sweden</option>
+					<option value="Switzerland">Switzerland</option>
+					<option value="Syria">Syria</option>
+					<option value="Taiwan">Taiwan</option>
+					<option value="Tanzania">Tanzania</option>
+					<option value="Thailand">Thailand</option>
+					<option value="The Czech Repubic">The Czech Repubic</option>
+					<option value="The United States of America">The United States of America</option>
+					<option value="Togo">Togo</option>
+					<option value="Tonga">Tonga</option>
+					<option value="Tunisia">Tunisia</option>
+					<option value="Turkey">Turkey</option>
+					<option value="Turkmenistan">Turkmenistan</option>
+					<option value="Uganda">Uganda</option>
+					<option value="Ukraine">Ukraine</option>
+					<option value="Uruguay">Uruguay</option>
+					<option value="Uzbekistan">Uzbekistan</option>
+					<option value="Venezuela">Venezuela</option>
+					<option value="Vietnam">Vietnam</option>
+					<option value="Zambia">Zambia</option>
+					<option value="Zimbabwe">Zimbabwe</option>
+
+				     </select>
+				</td>
+                          </tr>
+                          <tr>
+                            <th>趣味</th>
+                            <td>：
+                              <select onchange="changeHobby(this)">
+						<option value='all'>選択しない</option>
+						<option value='マンガ'>マンガ</option>
+						<option value='アニメ'>アニメ</option>
+						<option value='スポーツ'>スポーツ</option>
+						<option value='ゲーム'>ゲーム</option>
+						<option value='食事'>食事</option>
+						<option value='料理'>料理</option>
+						<option value='映画'>映画</option>
+						<option value='読書'>読書</option>
+						<option value='音楽'>音楽</option>
+						<option value='旅行'>旅行</option>
+						<option value='芸術'>芸術</option>
+					</select>
+                            </td>
+                          </tr>
+			     <tr>
+				<th></th><td id="hobbys"></td>
+                          <tr>
+                            <th>メールアドレス</th>
+                            <td>：<input name="mail" id="mail" size="20" type="text"></td>
+                          </tr>
+                          <tr>
+                            <th>パスワード</th>
+                            <td>：<input name="password" id="password" size="20"
+
+                                type="password"></td>
+                          </tr>
+                          <tr>
+                            <th>パスワード（確認用）</th>
+                            <td>：<input name="password2" id="password2" size="20"
+
+                                type="password"></td>
+                          </tr>
+				<tr><td colspan="2"><center><button id="next" onclick="next()">次へ</button></center></td></tr>
+                        </tbody>
+                      </table>
+                    </center>
+                  </div>
+                  <div id="end">
+                  </div>
+                </div>
+              </article>
+            </section>
+          </div>
+        </center>
+      </div>
+    </div>
+    <p style="text-align:right">Copyright(c) 2014 Langchange All Rights
+      Reserved.</p>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery1.7.2.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/createBirthdaySpin.js"></script>
+    <script src="js/initresist.js"></script>
+  </body>
+</html>

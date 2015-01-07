@@ -1,0 +1,46 @@
+/*全体*/
+#logo img{
+	zoom:50%;
+}
+
+h1{
+  font-size: 20px;
+  color:#fff;
+}
+
+h2{
+  font-size: 16px;
+}
+
+h3{
+  font-size: 16px;
+  color: #787878;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+h4{
+  font-size: 16px;
+}
+
+
+/* フッター */
+.footerGrid-left ul{
+	list-style:none;
+}
+
+.fb-comments iframe{
+	width:20px;
+}
+
+/*トップページ*/
+.center h2{
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+/*langchangeって ここどうしよう*/
+.sp-whatslangchange h2{
+	font-size: 12px;
+}

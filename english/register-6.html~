@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Sign up for free | Langchange~Language Exchange for Students~</title>
+    <!-- core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link href="css/system.css" rel="stylesheet">
+     <link type="text/css" rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/cupertino/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/sp.css" type="text/css" media="only screen and (min-width: 0px) and (max-width: 480px)">
+    <link rel="stylesheet" href="css/tab.css" type="text/css" media="only screen and (min-width: 481px) and (max-width: 768px)">
+    <link rel="stylesheet" href="css/pc.css" type="text/css" media="only screen and (min-width: 769px)">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>    <script src="js/respond.min.js"></script>    <![endif]-->
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+  </head>
+  <!--/head--> <body onload="checkiPhone()">
+    <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=1513109692251737&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+    <header id="header">
+      <div class="logo"> <a href="index.html"><img style="width:320px; margin-top:-10px;" src="images/langchange-logo.png"></a>
+      </div>
+    </header>
+    <!--/header-->
+    <div class="container" style="width:100%">
+      <div id="wrapper">
+        <center>
+          <div id="resistArea">
+              <section class="content"> <img src="images/register-5.png" height="125px"
+
+                  width="500px">
+                <h3 class="heading">DOWNLOAD SUPPORTED BROWSERS</h3>
+                <p style="text-align:center">
+                  Since Langchange is using the latest video chat technology, it will not run
+                  properly on browsers that are not supported.<br>
+                  Please use the supported browsers when you have talks at
+                  Langchange.</p><br><br>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-4  ">
+                    <div class="recent-work-wrap">
+<center><br>
+                -For PC-</center>
+              <br>
+              Use Google Chrome (free) or Firefox (free).
+              <table style="width: 100%" border="0">
+                <tbody>
+                  <tr>
+                    <td>
+                      <center><button class="buttons"><a href="https://www.google.com/intl/en/chrome/browser/" target="_blank"><img
+
+                              style="height: 125px; width: 125px;" src="images/downloadchrome.png"></a></button><br>
+                        (<a href="http://www.google.com/intl/en/chrome/" target="_blank">About
+                          Google Chrome</a>)</center>
+                    </td>
+                    <td>
+                      <center><button class="buttons"><a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank"><img
+
+                              style="height: 125px; width: 125px;" src="images/downloadfirefox.png"></a>
+                        </button><br>
+                        (<a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">About
+                          Firefox </a>)</center>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-4  ">
+                    <div class="recent-work-wrap">
+                      <center><br>
+					                  -For Android-</center>
+					                <br>
+					                Use Google Chrome (free) or Firefox (free).
+					                <table style="width: 100%" border="0">
+					                  <tbody>
+					                    <tr>
+					                      <td>
+					                        <center><button class="buttons"><a href="https://play.google.com/store/apps/details?id=com.android.chrome" target="_blank"><img
+
+					                                style="height: 125px; width: 125px;" src="images/downloadchrome.png"></a></button><br>
+					                          (<a href="http://www.google.com/intl/en/chrome/" target="_blank">About
+					                            Google Chrome</a>)</center>
+					                      </td>
+					                      <td>
+					                        <center> <button class="buttons"><a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox" target="_blank"><img
+
+					                                style="height: 125px; width: 125px;" src="images/downloadfirefox.png"></a>
+					                          </button><br>
+					                          (<a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">About
+					                            Firefox </a>)</center>
+					                      </td>
+					                    </tr>
+					                  </tbody>
+              </table>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-4  ">
+                    <div class="recent-work-wrap">
+                     <center><br>
+					                 -For iPhone(iOS)-</center>
+					               <br>
+					               Use Google Chrome (free).
+					               <table style="width: 100%" border="0">
+					                 <tbody>
+					                   <tr>
+					                     <td>
+					                       <center><button class="buttons"><a href="https://itunes.apple.com/app/chrome/id535886823" target="_blank"><img
+
+					                               style="height: 125px; width: 125px;" src="images/downloadchrome.png"></a></button></center>
+					                     </td>
+					                   </tr>
+					                   <tr>
+					                     <td>
+					                       <center>
+					                         <p>"Appear.in" (free app for video chat) is also
+					                           required.</p>
+					                         <button class="buttons"><a href="https://itunes.apple.com/app/appear.in-free-group-video/id878583078" target="_blank"><img
+
+					                               style="height: 125px; width: 125px;" src="images/downloadappearin.png"></a></button><br>
+					                         (<a href="https://appear.in/" target="_blank">About Appear.in</a>)</center>
+					                     </td>
+					                   </tr>
+					                 </tbody>
+              </table>
+                    </div>
+                  </div>
+                  <p>After you finish downloading, go <a href="login.html">here(langchange.org/english/login.html)</a> to log into Langchange.</p>
+                </div>
+              </section>
+          </div>
+        </center>
+      </div>
+    </div>
+    <p style="text-align:right">Copyright(c) 2014 Langchange All Rights
+      Reserved.</p>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/initresist.js"></script>
+    <script src="js/subControl.js"></script>
+
+    <div id="dialog1"></div>
+	    <div id="dialog2"></div>
+	    <div id="dialog3"></div>
+	    <div id="dialog4"></div>
+	    <div id="dialog5"></div>
+	    <div id="dialog6"></div>
+	    <div id="dialog7"></div>
+	    <div id="dialog8"></div>
+	    <div id="dialog9"></div>
+    <div id="dialog10"></div>
+  </body>
+</html>

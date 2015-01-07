@@ -1,0 +1,265 @@
+onload=init;
+
+var side;
+var timedifference=0;
+
+//初期化
+function init(){
+	//セッションの確認
+	checkSession();
+	//時差の取得
+	getTimeDifference();
+	
+	
+}
+
+
+//スケジュールの初期化
+function initialize(){
+	var data={
+		init : "init",
+		currentYear:year
+	};
+
+	$.ajax({
+		type:"POST",	
+		url:"php/teaching.php",
+		data:data,		
+		success:function(data,dataType){
+			var init = data.split(",");
+			var val;
+			for(var i=0;i<init.length-1;i=i+1){
+				try{
+					val = document.getElementById(init[i].slice(0,12));
+					val.innerHTML = init[i].slice(12);
+				}catch(e){}
+			}				
+		},
+		error:function(XMLHttpRequest,textStatus,errorThrown){
+				openDialog('データ更新中');
+		}
+	});
+	return false;
+}
+
+
+///登録処理
+function resist(rDate){
+
+//トーク5分前は登録できない
+var eday = new Date();
+var cYear = eday.getYear();
+var cMonth = eday.getMonth()+1;
+var cDate = eday.getDate();
+var cHour = eday.getHours();
+var cMinute = eday.getMinutes();
+
+tmonth = rDate.value.slice(0,2);
+tdate = rDate.value.slice(3,5);
+thour = rDate.value.slice(7,9);
+tminute = rDate.value.slice(10,12);
+tval   = rDate.value.slice(13);
+
+
+var tmpDate;
+var tmpHour;
+var tmpMinute=0;
+
+//日付を整える
+if(cDate<10)
+tmpDate = "0" + cDate;
+else
+tmpDate = cDate;
+
+
+//時間を整える
+if(tminute=="00"){
+tmpMinute=60;
+tmpHour = cHour +1;
+}else{
+tmpMinute=30;
+tmpHour = cHour;
+}
+
+//時間を整える
+if(cHour<10)
+tmpHour = "0" + tmpHour;
+else
+tmpHour = tmpHour;
+
+
+if((tmpDate==tdate && tmpHour==thour && (tmpMinute-cMinute)<=5) || (tmpDate==tdate && thour<tmpHour)){
+	openDialog("このトークはもう登録できません\n\n※トーク開始5分前まで登録ができます");
+}
+
+else{
+openDialog("マッチング待機中となりました<br/>もう一度ボタンを押すことでキャンセルできます<br/><br/>※マッチング後のキャンセルではLCコインが1枚減ります");		
+	
+	//セル内を書き換える
+	var val = document.getElementById(rDate.value);		
+	val.innerHTML = "<button class='cancel buttons' onClick=\"cancel('"+rDate.value+"')\"><img src='images/resistbutton-w.png'/></button>";
+
+	
+	var data ={
+			resistdate : rDate.value,
+			currentYear : year
+	};
+	
+	$.ajax({
+		type:"POST",	
+		url:"php/teaching.php",
+		data:data,		
+		success:function(data,dataType){
+				
+		},
+		error:function(XMLHttpRequest,textStatus,errorThrown){
+				openDialog('データ更新中');
+		}
+	});
+
+}
+	return false;
+
+}
+
+///キャンセル処理
+function cancel(dateIndex){
+	//セル内を書き換える
+	var val = document.getElementById(dateIndex);		
+	val.innerHTML = "<div class='cancel' id='"+dateIndex+"'><button class='buttons' id='resistbutton' value='"+dateIndex+"' onClick='resist(this)' ><img src='images/resistbutton2.png'/></button></div>";
+	var data ={
+			cancel : "cancel",
+			date : dateIndex,
+			currentYear:year,
+	};
+	
+	$.ajax({
+		type:"POST",	
+		url:"php/teaching.php",
+		data:data,		
+		success:function(data,dataType){
+		
+		},
+		error:function(XMLHttpRequest,textStatus,errorThrown){
+				openDialog('データ更新中');
+		}
+	});
+
+}
+
+///マッチング済キャンセル処理
+function cancelMatch(dateIndex){
+//トーク5分前はキャンセルできない
+var eday = new Date();
+var cYear = eday.getYear();
+var cMonth = eday.getMonth()+1;
+var cDate = eday.getDate();
+var cHour = eday.getHours();
+var cMinute = eday.getMinutes();
+
+tmonth = dateIndex.slice(0,2);
+tdate = dateIndex.slice(3,5);
+thour = dateIndex.slice(7,9);
+tminute = dateIndex.slice(10,12);
+tval   = dateIndex.slice(13);
+
+
+var tmpDate;
+var tmpHour;
+var tmpMinute=0;
+
+//日付を整える
+if(cDate<10)
+tmpDate = "0" + cDate;
+else
+tmpDate = cDate;
+
+
+//時間を整える
+if(tminute=="00"){
+tmpMinute=60;
+tmpHour = cHour +1;
+}else{
+tmpMinute=30;
+tmpHour = cHour;
+}
+
+//時間を整える
+if(cHour<10)
+tmpHour = "0" + tmpHour;
+else
+tmpHour = tmpHour;
+
+if(tmpDate==tdate && tmpHour==thour && (tmpMinute-cMinute)<=5){
+	openDialog("このトークはもうキャンセルできません\n\n※トーク開始5分前のキャンセルはできずペナルティになりますので、お気をつけください");
+
+
+}else{
+openConfirm("キャンセルしますか？<br/><br/>※あなたのLCコインが1枚減ります",
+function(cancel){
+	if(cancel){
+		return false; 
+	}else{
+
+
+	var currentTime = year * 100000000 + (eday.getMonth()+1) * 1000000 + eday.getDate() * 10000 +  eday.getHours() * 100 + eday.getMinutes();
+	
+
+	//セル内を書き換える
+	var val = document.getElementById(dateIndex);		
+	val.innerHTML = "<div class='cancel' id='"+dateIndex+"'><button id='resist' class='buttons' value='"+dateIndex+"' onClick='resist(this)' ><img src='images/resistbutton2.png' /></button></div>";
+	var data ={
+			mCancel : "mCancel",
+			date : dateIndex,
+			currentYear:year,
+			currentTime:currentTime,
+	};
+	
+	$.ajax({
+		type:"POST",	
+		url:"php/teaching.php",
+		data:data,		
+		success:function(data,dataType){
+			openDialog(data);
+		},
+		error:function(XMLHttpRequest,textStatus,errorThrown){
+				openDialog('データ更新中');
+		}
+	});
+
+	}});
+
+}
+
+
+}
+
+///時差を取得
+function getTimeDifference(){
+	var currentDay = eday.getDate();
+	var currentHour = eday.getHours();
+	var data={
+		currentDay : currentDay,
+		currentHour: currentHour,
+	};
+
+	$.ajax({
+		type:"POST",	
+		url:"php/timedifference.php",
+		data:data,		
+		success:function(data,dataType){
+			timedifference =  data;
+			//カレンダーの作成
+			document.getElementById("resist").innerHTML = createCallender("teaching");
+			//予定を表示
+			initialize();
+			//ポップの確認
+			checkPop();	
+		},
+		error:function(XMLHttpRequest,textStatus,errorThrown){
+				openDialog('データ更新中');
+		}
+	});
+	return false;
+}
+

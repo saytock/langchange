@@ -1,0 +1,98 @@
+/* プロフィール内部 */
+#image{
+	padding:20px;
+	width:200px;	
+}
+
+#fwrap{
+	float:left;
+}
+
+#privacy{
+	padding:20px;
+	line-height:1.5em;
+	font-size:12pt;
+	float:left;
+}
+
+
+#profile table{
+	width:500px;
+	padding:20px;
+	font-weight:nomal;
+	font-size:9pt;
+}
+
+#profile th{
+	width:60px;
+	line-height:1.0em;
+	text-align:center;
+	padding:4px;
+	background:#ddd;
+	border:solid 0.5pt #fff;
+}
+
+
+#profile td {
+	width:60px;
+	height:20px;
+	text-align:center;
+	vertical-align:middle;
+	padding:4px;
+	background:#eee;
+	border:solid 0.5pt #fff;
+}
+
+#profbutton{
+	text-align:center;
+	vertical-align:middle;
+	padding:0;
+	margin:0;
+	width:50px;
+}
+
+#profimage{
+	padding:0;
+	margin:0;
+	width:50px;
+	height:20px;
+}
+
+.clear { clear: both; }
+
+
+
+/*友達一覧・トークの履歴*/
+#histslide,#friend{
+	width:740px;
+	height:400px;
+}
+
+.bx-viewport{
+	height:300px !important;
+}
+
+#histslide ul,#friend ul{
+	height:250px;
+}
+
+#histslide li,#friend li{
+	width:200px;
+	float:left;
+}
+
+#histslide img,#friend img{
+	width:200px;
+	height:200px;
+}
+
+#histSlider img,#friendSlider img{
+	width:150px;
+	height:auto;
+}
+
+#schejule img{
+	width:100%;
+	height:auto;
+}
+

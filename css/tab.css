@@ -1,0 +1,208 @@
+/*全体*/
+body{
+max-width:100% !important;
+}
+
+ul{max-width:100% !important;}
+
+#logo img{
+	width:200px !important;
+}
+
+h1{
+  font-size: 20px;
+  color:#fff;
+}
+
+h2{
+  font-size: 16px;
+}
+
+h3{
+  font-size: 16px;
+  color: #787878;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+h4{
+  font-size: 16px;
+}
+/* ロゴ */
+a#logo{
+	
+}
+
+/* フッター */
+.footerGrid-left ul{
+	list-style:none;
+}
+
+.fb-comments iframe{
+	width:20px;
+}
+
+.footerGrid-left{
+	text-align:center;
+}
+
+.footerGrid-wrapper{
+	
+}
+
+.footerGrid-center{
+	
+}
+
+.footerGrid-right{
+	margin-top:40px;
+}
+
+/*トップページ*/
+.center h2{
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+/* トップページカバー */
+#top-cover{
+	zoom:70%;
+	position:relative
+}
+
+.carousel-indicators{
+	position:absolute;
+	bottom:-60px !important;
+}
+
+/*langchangeって ここどうしよう*/
+.sp-whatslangchange h2{
+	font-size: 12px;
+}
+
+/* トークのガイドライン 表の位置調整 */
+
+.talkguid-content{
+	margin:0 auto;
+	width:90% !important;
+}
+
+.pull-right{
+	margin-right:200px;
+}
+
+/* 新規登録セクション*/
+#resistArea{
+	zoom:60%;
+}
+
+input[type="text"],input[type="password"]{
+	width:70%;
+	height:auto;
+}
+
+/* メインページのプロフィール */
+#profile-pc{
+	display:none;
+}
+
+/* スケジュールのサイズ*/
+#schejule p{
+	font-size:16pt;
+}
+
+#schejule table{	
+	font-weight:nomal;
+	width:400px;
+	height:400px;
+}
+
+#schejule span{
+	text-align:center;
+	font-size:14pt;
+}
+
+#schejule ul{
+	font-size:9pt;
+	float:right;
+	text-align:center;
+	list-style:none;
+}
+
+#schejule th{
+	line-height:1.0em;
+	text-align:center;
+	padding:8px;
+	background:#ddd;
+	border:solid 0.5pt #fff;
+}
+
+#schejule td {
+	text-align:center;
+	padding:8px;
+	background:#eee;
+	border:solid 0.5pt #fff;
+}
+
+#schejule .currentDay{
+	background:#ff6666;
+}
+
+#schejule .balloon{
+	cursor:default;
+	background:none;
+	margin:0;
+	padding:0;
+}
+
+#schejule .apoint{
+	background:#ffeeaa;
+}
+
+#schejule{
+	margin-right:20px;
+	float:right;
+}
+
+#todaysApoint{
+	width:200px;
+	font-size:10pt;
+	margin-left:10px;
+	margin-top:30px;
+	float:left;
+	background:#FAFAD2;
+	padding:10px;
+}
+
+#todaysApoint h2{
+	font-size:12pt;
+	line-height:2.0em;
+}
+
+
+
+
+/* ログのサイズ */
+#log{
+	height: 250px;
+	width: 330px;
+}
+
+.jqplot-title{
+	font-size:15pt !important;
+}
+
+/* 設定のサイズ */
+#settingform section{
+	zoom:40%;
+}
+
+/* PC版メニューの非表示 */
+.menu-pc{
+	display:none;
+}
+
+.footerGrid-left{
+	display:none;
+}

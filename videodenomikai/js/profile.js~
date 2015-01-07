@@ -1,0 +1,297 @@
+
+///プロフィールを取得する
+function getProfile(friendid){
+	if(friendid.className=="英語トーク"){
+		window.confirm('日本語トークの登録をして\n相手を待ちましょう');
+	}else{
+
+
+	var tmpid = friendid.id	
+	var data ={
+			prof     : "prof",
+			friendid : tmpid
+		};
+
+		$.ajax({
+			type:"POST",
+			url: "php/friend.php",
+			data: data,
+			success: function(data,dataType){
+				//スケジュールの初期化
+				Initialize(tmpid);
+				//プロフィールの表示
+				profile(data);			
+			},
+			error: function(XMLHttpRequest,textStatus,errorThrown){
+				alert('Error : ' + errorThrown);
+			}
+		});
+	}
+		return false;
+ 
+}
+
+
+//スケジュールの初期化
+function Initialize(friendid){
+	var data={
+		init : "init",
+		friendid : friendid,
+		currentYear : year
+	};
+
+	$.ajax({
+		type:"POST",	
+		url:"php/friend.php",
+		data:data,		
+		success:function(data,dataType){
+			var init = data.split(",");
+			var val;
+			//現在の予定や登録状況を表示
+			for(var i=0;i<init.length-1;i=i+1){
+				try{
+					val = document.getElementById('f-'+init[i].slice(0,12));
+					val.innerHTML = init[i].slice(12);
+				}catch(e){}
+			}			
+		},
+		error:function(XMLHttpRequest,textStatus,errorThrown){
+				alert('Error : ' + errorThrown);
+		}
+	});
+	return false;
+}
+
+
+//プロフィールを表示
+function profile(data){
+	var profArray = data.split(",");
+	//写真を表示
+	var prof = "<img src='prof/"+profArray[0]+"' width='130px' height='150px' />";
+	var val = document.getElementById("image");
+	val.innerHTML = prof;
+	//情報を表示
+	prof = "名前： "+profArray[1]+"<br/>";
+	prof = prof+"性別： "+profArray[2]+"<br/>";
+	prof = prof+"生年月日： "+profArray[3]+"<br/>";
+	prof = prof+"大学名： "+profArray[4]+"<br/>";
+	prof = prof+"英語サポート： "+profArray[5]+"<br/>";
+	prof = prof+"<br/><br/><input type='button' name='block' value='ブロックする' onClick=\"block('"+profArray[6]+"')\" />";
+	val = document.getElementById("privacy");
+	val.innerHTML = prof;
+	
+
+	$('#profile').dialog({
+		title: 'プロフィール',
+		modal: true,
+		height:600,
+		width:'auto',
+    		create: function( event, ui ) {
+        		jQuery(this).css("maxWidth", "1000px");
+    		},
+		buttons: {
+			"OK": function(){
+				$(this).dialog('close');
+			}
+		}
+	});
+}
+
+///登録処理
+function resist(rDate){
+var val;
+var rDateArray = rDate.value.split("_");
+
+//トーク5分前は登録できない
+var eday = new Date();
+var cYear = eday.getYear();
+var cMonth = eday.getMonth()+1;
+var cDate = eday.getDate();
+var cHour = eday.getHours();
+var cMinute = eday.getMinutes();
+
+tmonth = rDateArray[0].slice(2,4);
+tdate = rDateArray[0].slice(5,7);
+thour = rDateArray[0].slice(9,11);
+tminute = rDateArray[0].slice(12,14);
+tval   = rDateArray[0].slice(15);
+
+
+var tmpDate;
+var tmpHour;
+var tmpMinute=0;
+
+//日付を整える
+if(cDate<10)
+tmpDate = "0" + cDate;
+else
+tmpDate = cDate;
+
+
+//時間を整える
+if(tminute=="00"){
+tmpMinute=60;
+tmpHour = cHour +1;
+}else{
+tmpMinute=30;
+tmpHour = cHour;
+}
+
+//時間を整える
+if(cHour<10)
+tmpHour = "0" + tmpHour;
+else
+tmpHour = tmpHour;
+
+
+if((tmpDate==tdate && tmpHour==thour && (tmpMinute-cMinute)<=5) || (tmpDate==tdate && thour<tmpHour)){
+	alert("このトークはもう登録できません\n\n※トーク開始5分前まで登録ができます");
+}
+
+else if(window.confirm('トークを予約しますか？')){	
+
+	val = document.getElementById(rDateArray[0]);		
+	val.innerHTML = "<div class='cancel buttons' onClick=\"cancelMatch('"+rDateArray[0]+"')\"><img src='images/resistbutton-c.png'/></div>";
+
+	var data ={
+			resistdate : rDateArray[0].slice(2),
+			friendid   : rDateArray[1],
+			currentYear : year
+	};
+	
+	$.ajax({
+		type:"POST",	
+		url:"php/friend.php",
+		data:data,		
+		success:function(data,dataType){
+			alert(data);	
+			
+		},
+		error:function(XMLHttpRequest,textStatus,errorThrown){
+				alert('Error : ' + errorThrown);
+		}
+	});
+
+	return false;
+}
+
+}
+
+///マッチング済キャンセル処理
+function cancelMatch(dateIndex){
+//トーク5分前はキャンセルできない
+var eday = new Date();
+var cYear = eday.getYear();
+var cMonth = eday.getMonth()+1;
+var cDate = eday.getDate();
+var cHour = eday.getHours();
+var cMinute = eday.getMinutes();
+
+tmonth = dateIndex.slice(0,2);
+tdate = dateIndex.slice(3,5);
+thour = dateIndex.slice(7,9);
+tminute = dateIndex.slice(10,12);
+tval   = dateIndex.slice(13);
+
+
+var tmpDate;
+var tmpHour;
+var tmpMinute=0;
+
+//日付を整える
+if(cDate<10)
+tmpDate = "0" + cDate;
+else
+tmpDate = cDate;
+
+
+//時間を整える
+if(tminute=="00"){
+tmpMinute=60;
+tmpHour = cHour +1;
+}else{
+tmpMinute=30;
+tmpHour = cHour;
+}
+
+//時間を整える
+if(cHour<10)
+tmpHour = "0" + tmpHour;
+else
+tmpHour = tmpHour;
+
+
+
+if(tmpDate==tdate && tmpHour==thour && (tmpMinute-cMinute)<=5){
+	alert("このトークはもうキャンセルできません\n\n※トーク開始5分前のキャンセルはできずペナルティになりますので、お気をつけください");
+
+}else if(window.confirm("キャンセルしますか？\n\n※あなたのLCコインは戻ってきません")){
+	//キャンセルの時間によってはペナルティ
+	var currentTime = cYear * 100000000 + cMonth * 1000000 + cDate * 10000 + cHour * 100 + cMinute;
+
+	//セル内を書き換える(learningのほう)
+	try{
+		var val = document.getElementById(dateIndex);		
+		val.innerHTML = "";
+	}catch(e){}
+	//セル内を書き換える(friendのほう)
+	try{
+		var val = document.getElementById("f-"+dateIndex);		
+		val.innerHTML = "";
+	}catch(e){}
+
+
+
+	var data ={
+			mCancel : "mCancel",
+			date : dateIndex,
+			currentYear:year,
+			currentTime:currentTime,
+	};
+	
+	$.ajax({
+		type:"POST",	
+		url:"php/learning.php",
+		data:data,		
+		success:function(data,dataType){
+			alert(data);
+		},
+		error:function(XMLHttpRequest,textStatus,errorThrown){
+				alert('Error : ' + errorThrown);
+		}
+	});
+
+
+}
+
+
+}
+
+
+//ブロックする
+function block(friendid){
+	if(window.confirm('本当にブロックしますか？')){
+		var data ={
+			block     : "block",
+			friendid : friendid
+		};
+
+		$.ajax({
+			type:"POST",
+			url: "php/friend.php",
+			data: data,
+			success: function(data,dataType){
+				alert(data);
+				window.location.reload();			
+			},
+			error: function(XMLHttpRequest,textStatus,errorThrown){
+				alert('Error : ' + errorThrown);
+			}
+		});
+	}
+
+		return false;
+	 
+
+}
+

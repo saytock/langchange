@@ -1,0 +1,7 @@
+DirectoryIndex index.html index.htm index.shtml index.php index.cgi
+AuthUserFile /home/langchange/www/.htpasswd
+AuthType Basic
+AuthName "Web access"
+Require valid-user
+Satisfy all
+Order deny,allow

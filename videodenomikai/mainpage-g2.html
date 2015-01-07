@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>マイページ | Langchange~学生のための英会話~</title>
+    <!-- core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link href="css/system.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/introjs.css" type="text/css">
+
+	<link type="text/css" rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/cupertino/jquery-ui.min.css" />
+
+    <link rel="stylesheet" href="css/sp.css" type="text/css" media="only screen and (max-width: 480px)">
+    <link rel="stylesheet" href="css/tab.css" type="text/css" media="only screen and (min-width: 481px) and (max-width: 768px)">
+    <link rel="stylesheet" href="css/pc.css" type="text/css" media="only screen and (min-width: 769px)">
+    <link rel="stylesheet" href="css/schejule.css" type="text/css" media="screen">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>    <script src="js/respond.min.js"></script>    <![endif]-->
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+  </head>
+  <!--/head-->
+  <body onload="introJs().start()">
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&appId=1513109692251737&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+    <header id="header">
+      <nav class="navbar navbar-inverse" role="banner">
+        <div class="container">
+          <div class="navbar-header"> <button type="button" class="navbar-toggle"
+
+              data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle
+                navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+              <span class="icon-bar"></span> </button><a style="width:60%;" class="navbar-brand" id="logo" href="#"><img style="width:100%;" src="images/langchange-logo.png" alt="logo"></a>
+          </div>
+	  	  <ul class="menu-pc nav navbar-nav" style="float:right;text-align:center">
+              <li><a href="#">Langchangeって？</a></li>
+              <li><a href="#">つかいかた</a></li>
+              <li><a href="#">トークのガイド</a></li>
+              <li><a href="#">よくある質問</a></li>
+              <li><a href="#">ログイン</a></li>
+		  </ul>
+	<!--スマートフォン用-->
+          <div  id="langmenu" class="collapse  navbar-right">
+            <ul class="nav nav-tabs nav-stacked" style="color:#333;margin-right:-40px;text-align:center">
+		      <li style="background:#888;color:#fff">システムメニュー</li>
+		      <li class="active"><a href="#" class="analistic-01">メインページ</a></li>
+              <li class=""><a href="#" class="analistic-02">スケジュール</a></li>
+              <li class=""><a href="#" class="tehnical">英語トーク</a></li>
+              <li class=""><a href="jap-talk-g1" class="tehnical" data-intro="英語トークでコインをつかったら、今度は日本語を教えてあげてコインをゲットしましょう。" data-step="12">日本語トーク</a></li>
+              <li class=""><a href="#" class="tehnical">友達</a></li>
+              <li class=""><a href="#" class="tehnical">ログ</a></li>
+              <li class=""><a href="#" class="tehnical">設定</a></li>
+              <li class=""><a id="end"> <button class="buttons" id="logout-sp"><img style="width: 110px" src="./images/logout.png"></button> </a></li>
+        <!--  <li class=""><a href="#" class="tehnical">プレミアム</a></li>  -->
+		      <li style="background:#888;color:#fff">グローバルメニュー</li>
+              <li><a href="#">Langchangeって？</a></li>
+              <li><a href="#">つかいかた</a></li>
+              <li><a href="#">トークのガイド</a></li>
+              <li><a href="#">よくある質問 </a></li>
+		      <li style="background:#888;color:#fff">サポート</li>
+		      <li><a onclick="showTutorial()">チュートリアル</a></li>
+              <li><a href="#">ご利用規約</a></li>
+              <li><a href="#">お問い合わせ</a></li>
+              <li><a href="#">運営者情報</a></li>
+              <li><a href="#">リンク</a></li>
+            </ul>
+          </div>
+	<!-- /スマートフォン用 -->
+
+        </div>
+      </nav>
+    </header>
+    <!--/header-->
+    <div class="container" style="text-align:center">
+      <section id="content" class="shortcode-item">
+        <div class="container"> <br>
+          <div class="tab-wrap">
+            <div class="media">
+              <div class="parrent pull-left">
+                <ul class="nav nav-tabs nav-stacked">
+                  <li class="active"><a href="#" class="analistic-01">メインページ</a></li>
+                  <li class=""><a href="#" class="analistic-02">スケジュール</a></li>
+                  <li class=""><a href="#" class="tehnical">英語トーク</a></li>
+                  <li class=""><a href="jap-talk-g1.html" class="tehnical" data-intro="英語トークでコインをつかったら、今度は日本語を教えてあげてコインをゲットしましょう。" data-step="12">日本語トーク</a></li>
+                  <li class=""><a href="#" class="tehnical">友達</a></li>
+                  <li class=""><a href="#" class="tehnical">ログ</a></li>
+                  <li class=""><a href="#" class="tehnical">設定</a></li>
+                  <li class=""><a id="end"> <button class="buttons"
+                          id="logout"><img style="width: 110px" src="./images/logout.png"></button> </a></li>
+                <!--  <li class=""><a href="premium.html" class="tehnical">プレミアム</a></li>  -->
+                </ul>
+              </div>
+              <div class="parrent media-body">
+                <div class="tab-content">
+                  <div class="tab-pane active in" id="tab1">
+                    <div class="media">
+                      <div class="media-body">
+                        <!-- スマートフォン用 -->
+                        <center>
+                          <div id="profile-sp">
+                            <table>
+                              <tbody>
+                                <tr>
+                                  <th colspan="2" id="prof-image-sp"> </th>
+                                </tr>
+                                <tr>
+                                  <th colspan="2" id="prof-name-sp"> </th>
+                                </tr>
+                                <tr>
+                                  <th>LCコイン：</th>
+                                  <td id="prof-lccoin-sp"></td>
+                                </tr>
+                                <tr>
+                                  <th>検索可能回数：</th>
+                                  <td id="prof-serching-sp"></td>
+                                </tr>
+                                <tr>
+                                  <th>友達：</th>
+                                  <td id="prof-friends-sp"></td>
+                                </tr>
+                                <tr>
+                                  <th>出身国：</th>
+                                  <td id="prof-nation-sp"> </td>
+                                </tr>
+                                <tr>
+                                  <th>性別：</th>
+                                  <td id="prof-sex-sp"> </td>
+                                </tr>
+                                <tr>
+                                  <th>誕生日：</th>
+                                  <td id="prof-birthday-sp"></td>
+                                </tr>
+                                <tr>
+                                  <th>趣味：</th>
+                                  <td id="prof-hobby-sp"></td>
+                                </tr>
+                                <tr>
+                                  <td colspan="2"><b>友達を紹介してLCコインをゲットしよう！<br>以下があなたの紹介コードです。<br>友達が登録の時にこれを入力すると、<br>おたがいがLCコインを獲得できます！</b></td>
+                                </tr>
+                                <tr>
+                                  <td colspan="2" id="prof-code-sp"></td>
+                                </tr>
+                                <tr>
+                                  <td colspan="2">
+                                    <center>
+                                      <div class="fb-share-button" data-layout="button"
+
+                                        data-width="300" data-href="https://www.facebook.com/LangChange2014"></div>
+                                    </center>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <br>
+                            <br>
+                          </div>
+                        </center>
+                        <!-- /スマートフォン用 -->
+                        <div id="profile-pc">
+                          <table>
+                            <tbody>
+                              <tr>
+                                <th rowspan="8" id="prof-image"> <br>
+                                </th>
+                                <th id="prof-name" colspan="2"> <br>
+                                </th>
+                              </tr>
+                              <tr>
+                                <th>LCコイン：</th>
+                                <td id="prof-lccoin"> <br>
+                                </td>
+                                <td class="balloon" title="友達が登録の時にあなたの紹介コードを入力すると、おたがいがLCコインを獲得できます。"><b>友達を紹介してLCコインをゲットしよう！</b></td>
+                              </tr>
+                              <tr>
+                                <th>検索可能回数：</th>
+                                <td id="prof-serching"><br>
+                                </td>
+                                <td id="prof-code"> <br>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>友達：</th>
+                                <td id="prof-friends"> <br>
+                                </td>
+                                <td class="balloon" title="以下のリンクをクリックし、URLを教えてあげてください。このリンクから友達が登録すると、おたがいLCコインをゲットできます。">
+
+<a id="invLink" href="">友達紹介用リンク</a>
+
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>出身国：</th>
+                                <td id="prof-nation"> <br>
+                                </td>
+                                <td><div class="fb-share-button" data-layout="button"
+
+                                        data-width="300" data-href="https://www.facebook.com/LangChange2014"></div></td>
+                              </tr>
+                              <tr>
+                                <th>性別：</th>
+                                <td id="prof-sex"> <br>
+                                </td>
+					<td></td>
+                              </tr>
+                              <tr>
+                                <th>誕生日：</th>
+                                <td id="prof-birthday"> <br>
+                                </td>
+					<td></td>
+                              </tr>
+                              <tr>
+                                <th>趣味：</th>
+                                <td id="prof-hobby"> <br>
+                                </td>
+					<td class="balloon" title="このQRコードから友達が登録すると、おたがいLCコインをゲットできます。"><button onclick="openQR()">QRコードを表示</button></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <br>
+                          <br>
+                        </div>
+                      </div>
+                      <section class="content" data-intro="5分前になるとスタンバイボタンが出現します。忘れずにクリックしましょう。おたがいがクリックしたところでビデオウィンドウが自動的に立ち上がります。さあ、25分間のトークのはじまりです！" data-step="11">
+                        <h3 class="heading">出席確認</h3>
+                        <article>
+                          <div style="text-align: left;" id="today-attend"></div>
+                          <div id="skype" style="display:inline-block"> </div>
+                        </article>
+                      </section>
+                    </div>
+                    <div id="todaysApoint" style="display:none"> </div>
+                    <div id="schejule" style="display:none"> </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+<center style="vertical-align:middle">
+<div id="qrcode"></div>
+<div id="tutorial" style="display:none">
+	<center>
+	<iframe src="//www.slideshare.net/slideshow/embed_code/40715897" width="500" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+	</center>
+	<br/>
+	<input type="checkbox" id="tutori-check">以後、表示しない
+</div>
+
+</center>
+    </div>
+    <!-- footer -->
+    <center>
+      <div id="footer">
+        <div id="footer-content">
+          <div class="footerGrid-left">
+            <ul>
+              <li style="font-weight:bold;font-size:12pt"><font color="#fff">-サポート-</font></li>
+              <br>
+              <li><a href="#"><font color="#fff">ご利用規約</font></a></li>
+              <br>
+              <li><a href="#"><font color="#fff">お問い合わせ</font></a></li>
+              <br>
+              <li><a href="#"><font color="#fff">運営者情報</font></a></li>
+              <br>
+              <li><a href="#"><font color="#fff">リンク</font></a></li>
+              <br>
+            </ul>
+          </div>
+          <div class="footerGrid-wrapper">
+            <div style="background:#eee" class="footerGrid-center"> <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2FLangchange2014&amp;width=400&amp;height=400&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=true&amp;show_border=true&amp;appId=1513109692251737"
+
+                style="border:none; overflow:hidden; width:400px; height:400px; max-width:100%"
+
+                allowtransparency="true" frameborder="0" scrolling="no"></iframe>
+            </div>
+            <div class="footerGrid-right"> <textarea rows="10" cols="20" id="contact"
+
+                name="contact" placeholder="サービス、このページに関するご意見・ご要望をお待ちしております。"></textarea><br>
+              <input name="send" onclick="sendMail()" value="送信する" type="button">
+              <p style="font-size:7pt;"><font color="#fff">※ご意見に返信はできません
+                  のでご了承ください</font></p>
+              <br>
+              <br>
+              <div style="font-size:7pt"><font color="#fff">Copyright(c)
+                  2014 Langchange All Rights Reserved.</font></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </center>
+    <!--/#footer-->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery1.7.2.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/jquery.balloon.js"></script>
+    <script src="js/checkSession.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/addSerching.js"></script>
+    <script type="text/javascript" src="js/jquery.qrcode.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+    <script src="js/checkPop.js" ></script>
+	<script src="js/idle.js"></script>
+	<script src="js/intro.js"></script>
+<script type="text/javascript">
+ 	introJs().setOption('doneLabel', 'Next page').start().oncomplete(function() {
+           window.location.href = 'jap-talk-g1.html?multipage=true';
+ 	  });
+
+      if (RegExp('multipage', 'gi').test(window.location.search)) {
+        introJs().start();
+      }
+   </script>
+	<script src="js/mainControl.js"></script>
+  </body>
+</html>

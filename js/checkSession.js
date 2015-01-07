@@ -1,0 +1,97 @@
+///セッションを確認
+function checkSession(){
+	var data ={
+			check : "check",
+		};
+
+		$.ajax({
+			type:"POST",
+			url: "php/check.php",
+			data: data,
+			success: function(data,dataType){
+				//ブラウザ対応確認
+				if(isSupported(['chrome','firefox','crios'])){
+				openDialog("現在お使いのブラウザではご利用できません");
+				setTimeout("gotoRedirect()",3000);
+				}
+				else if(data=="gotoLogin")
+				window.location="login.html";
+				else if(data=="gotoEnglish"){
+					var key = window.location.pathname;
+					key = key.replace("/","english/");
+					window.location = key;
+				}
+				
+			},
+
+			error: function(XMLHttpRequest,textStatus,errorThrown){
+				
+			}
+		});
+	return false;	
+}
+
+///howtouseへ
+function gotoRedirect(){
+	window.location = "howtouse.html#browser";
+}
+
+///ブラウザ名を取得
+var getBrowser = function(){
+    var ua = window.navigator.userAgent.toLowerCase();
+    var ver = window.navigator.appVersion.toLowerCase();
+    var name = 'unknown';
+
+
+    if (ua.indexOf("msie") != -1){
+        if (ver.indexOf("msie 6.") != -1){
+            name = 'ie6';
+        }else if (ver.indexOf("msie 7.") != -1){
+            name = 'ie7';
+        }else if (ver.indexOf("msie 8.") != -1){
+            name = 'ie8';
+        }else if (ver.indexOf("msie 9.") != -1){
+            name = 'ie9';
+        }else if (ver.indexOf("msie 10.") != -1){
+            name = 'ie10';
+        }else{
+            name = 'ie';
+        }
+    }else if(ua.indexOf('trident/7') != -1){
+        name = 'ie11';
+    }else if (ua.indexOf('chrome') != -1){
+        name = 'chrome';
+    }else if (ua.indexOf('safari') != -1){
+        name = 'safari';
+    }else if (ua.indexOf('opera') != -1){
+        name = 'opera';
+    }else if (ua.indexOf('firefox') != -1){
+        name = 'firefox';
+    }
+   //androidのための処理
+    /* if(ua.indexOf('safari') != -1 && ua.indexOf('chrome') != -1){
+	name = 'unavarable';
+     }*/
+
+     //iphoneのための処理
+    if(ua.indexOf('crios') != -1){
+	name = 'crios';
+     }
+    return name;
+};
+
+///対応ブラウザかの確認
+var isSupported = function(browsers){
+    var browserFlag = "off";
+    var thusBrowser = getBrowser();
+    for(var i=0; i<browsers.length; i++){
+        if(browsers[i] == thusBrowser)
+         browserFlag = "on";
+     }
+	if(browserFlag != "on"){
+		return true;
+	}else{
+		return false;
+	}
+     
+};

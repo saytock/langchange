@@ -1,0 +1,89 @@
+
+/*スケジュールカレンダー*/
+#schejule p{
+	font-size:16pt;
+}
+
+#schejule table{	
+	font-weight:nomal;
+	width:400px;
+	height:400px;
+}
+
+#schejule span{
+	text-align:center;
+	font-size:14pt;
+}
+
+#schejule ul{
+	font-size:9pt;
+	float:right;
+	text-align:center;
+	list-style:none;
+}
+
+#schejule th{
+	line-height:1.0em;
+	text-align:center;
+	padding:8px;
+	background:#ddd;
+	border:solid 0.5pt #fff;
+}
+
+#schejule td {
+	text-align:center;
+	padding:8px;
+	background:#eee;
+	border:solid 0.5pt #fff;
+}
+
+#schejule .currentDay{
+	background:#ff6666;
+}
+
+#schejule .balloon{
+	cursor:default;
+	background:none;
+	margin:0;
+	padding:0;
+}
+
+#schejule .apoint{
+	background:#ffeeaa;
+}
+
+#schejule{
+	margin-right:20px;
+	float:right;
+}
+
+#todaysApoint{
+	width:200px;
+	font-size:10pt;
+	margin-left:10px;
+	margin-top:30px;
+	float:left;
+	background:#FAFAD2;
+	padding:10px;
+}
+
+#todaysApoint h2{
+	font-size:12pt;
+	line-height:2.0em;
+}
+
+#tomorrowApoint{
+	width:200px;
+	font-size:10pt;
+	margin-left:10px;
+	margin-top:30px;
+	float:left;
+	background:#FAFAD2;
+	padding:10px;
+}
+
+#tomorrowApoint h2{
+	font-size:12pt;
+	line-height:2.0em;
+}
+

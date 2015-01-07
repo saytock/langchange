@@ -1,0 +1,44 @@
+#resistArea{
+}
+
+#resistArea section{
+	text-align:center;
+	line-height:1.5em;
+	width:700px;
+	height:500px;
+}
+
+#resistArea #setting{
+	text-align:left;
+	line-height:2.5em;
+}
+
+#resistArea #image{
+	display:none;
+}
+
+
+
+#contents{
+	width:700px;
+	height:250px;
+}
+
+#contents h2{
+	font-size:14pt;
+	line-height:2.0em;
+}
+
+#end{
+	width:600px;
+}
+
+#next{
+	float:right;
+	padding-right:20px;
+}
+
+#setting li{
+	line-height:1.5em;
+}
+

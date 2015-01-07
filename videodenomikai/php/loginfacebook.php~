@@ -1,0 +1,51 @@
+<?php
+//facebookSDKを読み込み
+require_once("facebook.php");
+include("connectDB.php");
+
+//アプリの情報を$configに格納
+$config = array(
+    'appId' => "1513109692251737",
+    'secret' => "05e6ab831200a816a07eb4df3ae03513"
+);
+ 
+$facebook = new Facebook($config);
+$user = $facebook->getUser();
+//もしユーザがフェイスブックにログインしていたら
+if ( $user ) {
+	$query = $pdo->query("SELECT name,image,ticket FROM users WHERE id = '".$user."'");
+	$rows=$query->fetch(PDO::FETCH_ASSOC);
+	//langchangeに登録していたら	
+	if($rows["name"]!=""){
+		//セッションデータを取得
+		session_start();
+		$_SESSION["id"] = $user;
+		$_SESSION["name"] = $rows["name"];
+		$_SESSION["image"] = $rows["image"];
+		$_SESSION["ticket"] = $rows["ticket"];
+		//友達の人数を取得
+		$passtmp = $pdo->query("SELECT count(friend.id) friends FROM friend WHERE userid='".$_SESSION["id"]."'");
+		$passtmp = $passtmp ->fetch(PDO::FETCH_ASSOC);
+		$_SESSION["friends"] = $passtmp['friends'];
+		//退会登録ページへりダイレクト
+		if(isset($_SESSION["exit"])){
+			$redirect='../exit.html';
+			header('Location:'.$redirect);
+			exit;
+		}
+		//メインページへりダイレクト
+		$redirect='../mainpage.html';
+    		header('Location:'.$redirect);
+    		exit;
+	}else{
+	//登録してなかったら登録画面へ
+    		$redirect='../resist-2.html';
+    		header('Location:'.$redirect);
+    		exit;
+	}
+} else { //ログインしてなかったらログイン
+    $loginUrl = $facebook->getLoginUrl();
+    header('Location:'.$loginUrl);
+    exit;
+}
+?>

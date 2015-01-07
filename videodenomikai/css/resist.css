@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+/* スケジュール設定 */
+#resist{
+	line-height:2.0em;
+	font-size:14pt;
+}
+
+#resist tr{
+	height:50px;
+}
+
+#resist td{
+	width:100px;
+}
+
+#resist li{
+	display:block;
+	text-align:center;
+	padding:14px;
+	float:left;
+	border:solid 1pt #000;
+	font-size:14pt;
+	color:#000;
+	cursor:pointer;
+}
+
+#resist table{
+	
+	font-weight:nomal;
+	font-size:10pt;
+}
+
+#resist th{
+	line-height:1.0em;
+	text-align:center;
+	vertical-align:middle;
+	padding:5px;
+	background:#ddd;
+	border:solid 1pt #fff;
+}
+
+#resist td {
+	text-align:center;
+	vertical-align:middle;
+	padding:5px;
+	background:#eee;
+	border:solid 1pt #fff;
+}
+
+img{
+	padding:0px;
+	margin:0px;
+	cursor:pointer;
+}
+
+#resist img{
+	width:100%;
+	height:100%;
+}
+
+
+#resistbutton{
+	text-align:center;
+	padding:0;
+	margin:10px 0 0 0;
+	width:100px;
+}
+
+.link{
+	display:inline-block;
+	cursor:default;
+	color:#aa6666;
+}
+.link:hover{
+	color:#0000ff;
+}
+
+.cancel{
+
+	cursor:default;
+}

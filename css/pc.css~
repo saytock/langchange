@@ -1,0 +1,130 @@
+/*全体*/
+h1{
+  font-size: 36px;
+  color:#fff;
+}
+
+h2{
+  font-size: 20px;
+}
+
+h3{
+  font-size: 16px;
+  color: #787878;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+h4{
+  font-size: 16px;
+}
+
+/*フッターの3カラム（facebookのところでclear:bothされてるのかなぜか一番右がうまくいかないので、ラップしてる*/
+.footerGrid-left{
+	float:left;
+	width:200px;
+}
+
+.footerGrid-left ul{
+	list-style:none;
+}
+.footerGrid-wrapper{
+	margin-left:15px;
+	width:750px;
+	max-width:100%;
+}
+
+.footerGrid-center{
+	float:left;
+	width:600px;
+	max-width:100%;
+}
+
+.footerGrid-right{
+	margin-left:660px;
+	width:300px;
+	max-width:100%;
+}
+/* ロゴ */
+a#logo{
+	width:300px;
+	margin-left:-20px;
+}
+
+/*  見出し */
+.center h2{
+  font-size: 36px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+/* トップページ（4つの理由） */
+.reasons4{
+	width:50%;
+}
+
+/* Langchangeって (特徴)*/
+.featurea6{
+	width:33.33333333333333%;
+}
+
+#feature h4{
+	margin: 0 110px;
+}
+
+/*トークガイド コンテナー*/
+.talk-float{
+	float:left;
+}
+
+.talkguid-content{
+	margin-left:70px !important;
+	width:650px !important;
+}
+
+/* メインページのプロフィール */
+#profile-pc table{
+	margin-left:50px;
+	margin-right:50px;
+	line-height:1.0em;
+}
+
+#profile-pc-a table{
+	margin-left:0px;
+	margin-right:0px;
+	line-height:1.0em;
+}
+
+
+#profile-pc th,#profile-pc td{
+	padding-left:30px;
+}
+
+#profile-sp{
+	display:none;
+}	
+
+	
+
+/* ログのサイズ */
+#log{
+	height: 400px;
+	width: 600px;
+}
+
+/* 新規登録のテーブル */
+#resistArea th{
+	width:350px !important;
+}
+#resistArea td{
+	width:650px !important;
+}
+
+/* プロフィールの大きさ */
+#profile{
+	width:850px !important;
+}
+
+#for_sp{
+	display:none;
+}
